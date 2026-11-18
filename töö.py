@@ -1,3 +1,8 @@
+
+import math
+
+# 9. ülesanne
+
 try:
     print("Nelinurga kontroll")
     k1=float(input("1. külje pikkus:"))
@@ -13,3 +18,30 @@ try:
         print("Viga küljed > 0")
     except ValueError:
         print("Viga: täisarv.")
+
+
+# 10. ülesanne
+
+tehed=["+", "-", "*", "/"]
+
+try:
+    arv1=float(input("Sisesta 1. arv: "))
+    arv2=float(input("Sisesta 2. arv: "))
+    tehe=input("Sisesta tehe: ")
+    if tehe in tehed: 
+        if tehe=="+":
+            print(f"{arv1}{tehe}{arv2}={arv1+arv2}")
+        elif tehe=="-":
+            print(f"{arv1}{tehe}{arv2}={arv1-arv2}")
+        elif tehe=="*":
+            print(f"{arv1}{tehe}{arv2}={arv1*arv2}")
+        elif tehe=="/":
+            if arv2==0:
+             print("DIV/0")
+         else:
+             print(f"{arv1}{tehe}{arv2}={arv1/arv2}")
+    else:
+        print("Tundmatu tehtemärk")
+
+except ValueError:
+    print("Viga: sisesta arvud")
